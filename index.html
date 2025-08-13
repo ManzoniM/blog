@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Hub Pessoal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-pattern dark:bg-gray-900">
+    <!-- Header/Navigation -->
+    <header
+        class="fixed top-0 left-0 right-0 bg-gray-600 bg-opacity-90 backdrop-blur-sm z-50 shadow-md dark:bg-gray-800 dark:bg-opacity-90">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold text-white dark:text-blue-200">MIGUEL LUIZ MANZONI</h1>
+                <p class="text-sm text-blue-200 dark:text-blue-300">Técnico em Administração</p>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#links"
+                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Links</a>
+                    </li>
+                    <li><a href="#destaques"
+                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Destaques</a>
+                    </li>
+                    <li><a href="#sobre"
+                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Sobre</a>
+                    </li>
+                    <li><a href="#contato"
+                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="theme-toggle"
+                class="theme-toggle p-2 rounded-full bg-gray-700 text-blue-200 hover:bg-gray-600 transition dark:bg-gray-700 dark:text-blue-300 dark:hover:bg-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            <button id="mobile-menu-button" class="md:hidden text-blue-200 dark:text-blue-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 dark:bg-gray-800">
+            <ul class="px-4 py-2 space-y-2">
+                <li><a href="#links"
+                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Links</a>
+                </li>
+                <li><a href="#destaques"
+                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Destaques</a>
+                </li>
+                <li><a href="#sobre"
+                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Sobre</a>
+                </li>
+                <li><a href="#contato"
+                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-12 container mx-auto px-4">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-16 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Meu Hub Profissional</h2>
+            <p class="text-lg max-w-2xl mx-auto dark:text-gray-300">Tudo sobre minha carreira e experiência em
+                administração.</p>
+        </section>
+
+        <!-- Links Section -->
+        <section id="links" class="mb-16 fade-in">
+            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Meus Links</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/miguel-luiz-manzoni-01a799278/" target="_blank"
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg dark:text-white">LinkedIn</h3>
+                        <p class="text-sm text-blue-200 dark:text-blue-300">Perfil administrativo</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio -->
+                <a href="https://meuportfolio.com" target="_blank"
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20 3h-8c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2h8c1.103 0 2-.897 2-2v-6c0-1.103-.897-2-2-2zm-8 8v-6h8l.002 6h-8.002zm-6 2h-4v2h4c1.103 0 2-.897 2-2v-6h-2v6zm-2-8h4v-2h-4c-1.103 0-2 .897-2 2v6h2v-6z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg dark:text-white">Blog Pessoal</h3>
+                        <p class="text-sm text-blue-200 dark:text-blue-300">Meus artigos</p>
+                    </div>
+                </a>
+
+                <!-- Currículo -->
+                <a href="https://drive.usercontent.google.com/u/0/uc?id=1nAtD4l7pE1ShoapeurDXFjQnZBkZKLTI&export=download"
+                    target="_blank"
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M14 2h-7.229c-1.583 0-2.771 1.139-2.771 2.583v16.834c0 1.445 1.188 2.583 2.771 2.583h10.458c1.583 0 2.771-1.139 2.771-2.583v-12.75l-6-5.667zm-5 8h2v8h-2v-8zm4 3h2v5h-2v-5zm-8-3h2v5h-2v-5zm11.667 10.833c0 .46-.369.834-.833.834h-10.5c-.46 0-.833-.375-.833-.834v-16.666c0-.46.373-.833.833-.833h6.667v4.375c0 .46.373.833.833.833h4.333v12.291z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg dark:text-white">Currículo</h3>
+                        <p class="text-sm text-blue-200 dark:text-blue-300">Baixar em PDF</p>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/_manzonimiguel_/" target="_blank"
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg dark:text-white">Instagram</h3>
+                        <p class="text-sm text-blue-200 dark:text-blue-300">@_manzonimiguel_</p>
+                    </div>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/ManzoniM?tab=repositories" target="_blank"
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg dark:text-white">Github</h3>
+                        <p class="text-sm text-blue-200 dark:text-blue-300"> Todos meus sites</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Destaques Section -->
+        <section id="destaques" class="mb-16 fade-in">
+            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Destaques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Último artigo --> <!--
+                <div class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 h-40 rounded-lg mb-4 flex items-center justify-center dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M24 3v18h-24v-18h24zm-1 1h-22v16h22v-16zm-1 3h-20v1h20v-1zm-6 2h-14v1h14v-1zm-6 2h-8v1h8v-1zm8 2h-14v1h14v-1zm0 2h-14v1h14v-1zm-8 2h-8v1h8v-1z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 dark:text-white">Último Artigo</h3>
+                    <p class="text-sm mb-4 dark:text-gray-300">Título do meu último artigo publicado no blog.</p>
+                    <a href="#" target="_blank" class="text-blue-200 hover:text-white text-sm font-medium dark:text-blue-300 dark:hover:text-white">Ler →</a>
+                </div> -->
+
+                <!-- Portifólio Senac -->
+                <div
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="bg-blue-200 h-40 rounded-lg mb-4 flex items-center justify-center dark:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17v-10l-6 6 6 6 6-6-6-6v10z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2 dark:text-white">Portifólio Senac</h3>
+                    <p class="text-sm mb-4 dark:text-gray-300">Portifólio feito para fins de mostrar tudo que foi
+                        aprendido no curso em Técnico de Administração pelo Senac Jaú</p>
+                    <a href="https://manzonim.github.io/Senac/" target="_blank"
+                        class="text-blue-200 hover:text-white text-sm font-medium dark:text-blue-300 dark:hover:text-white">Ver
+                        projeto →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" class="mb-16 fade-in">
+            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Sobre Mim</h2>
+            <div class="bg-gray-700 bg-opacity-70 rounded-xl p-8 max-w-4xl mx-auto dark:bg-gray-800">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-32 h-32 rounded-full bg-blue-200 overflow-hidden flex-shrink-0 dark:bg-blue-700">
+                        <!-- Placeholder for profile image -->
+                        <div class="w-full h-full flex items-center justify-center">
+                            <img src="foto1.jpg" alt="Minha Foto"
+                                class="w-40 h-40 rounded-full shadow-md border-2 border-gray-300 dark:border-gray-700">
+                        </div>
+
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 dark:text-white">Miguel Luiz Manzoni</h3>
+                        <p class="mb-4 dark:text-gray-300">Técnico em Administração com experiência em processos
+                            administrativos, gestão de documentos e atendimento ao cliente.</p>
+                        <p class="dark:text-gray-300">Com formação técnica e mais de 3 anos de experiência no setor
+                            administrativo, possuo habilidades em organização, gestão de tempo e resolução de problemas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="fade-in">
+            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Contato</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Email -->
+                <div
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg dark:text-white">E-mail</h3>
+                            <p class="text-sm text-blue-200 dark:text-blue-300">miguel.lmanzoni@gmail.com</p>
+                        </div>
+                    </div>
+                    <button onclick="copyToClipboard('miguel.lmanzoni@gmail.com')"
+                        class="mt-4 w-full py-2 bg-blue-200 bg-opacity-20 text-blue-200 rounded-lg hover:bg-opacity-30 transition dark:bg-blue-800 dark:bg-opacity-20 dark:text-blue-300 dark:hover:bg-opacity-30">
+                        Copiar e-mail
+                    </button>
+                </div>
+
+                <!-- Telefone -->
+                <div
+                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M20 22.621l-3.521-3.52c-1.227.804-2.586 1.447-4.061 1.888-1.488.444-3.05.679-4.669.679-6.617 0-12-5.383-12-12s5.383-12 12-12 12 5.383 12 12c0 1.619-.236 3.181-.679 4.669-.441 1.475-1.084 2.833-1.888 4.061l3.52 3.521-1.412 1.412zm-10.621-14.621c-3.859 0-7 3.14-7 7 0 .772.156 1.52.428 2.222l1.396-1.396c-.109-.441-.209-.887-.282-1.344-.139-.871-.22-1.77-.22-2.693 0-2.76 2.24-5 5-5 .923 0 1.822.081 2.693.22.457.073.903.173 1.344.282l1.396-1.396c-.702-.272-1.45-.428-2.222-.428zm9.001 5.997c-.08-.855-.19-1.696-.33-2.525l-1.447.387c.109.68.203 1.37.273 2.067l1.504-.929zm-10.38-5.38c.48-.276.98-.518 1.495-.721l-1.133-1.133c-.401.185-.79.393-1.167.623l.805 1.231zm12.142 5.688l-1.298.734c.166.586.306 1.185.418 1.797l1.441-.407c-.137-.629-.265-1.265-.381-1.908.001-.072.009-.143.009-.216 0-.732-.092-1.439-.253-2.118l-1.449.398c.131.595.222 1.208.27 1.832h-.002zm-11.579-9.405c-.715.428-1.39.913-2.018 1.45l-.799-1.222c.715-.467 1.476-.878 2.269-1.229l.548 1.001zm9.387 3.147c-.567-.302-1.156-.566-1.763-.792l-.61 1.33c.484.222.952.472 1.405.747l.968-1.285z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg dark:text-white">Telefone</h3>
+                            <p class="text-sm text-blue-200 dark:text-blue-300">(14) 99799-6991</p>
+                        </div>
+                    </div>
+                    <button onclick="copyToClipboard('(14) 99799-6991')"
+                        class="mt-4 w-full py-2 bg-blue-200 bg-opacity-20 text-blue-200 rounded-lg hover:bg-opacity-30 transition dark:bg-blue-800 dark:bg-opacity-20 dark:text-blue-300 dark:hover:bg-opacity-30">
+                        Copiar telefone
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-700 bg-opacity-90 py-6 dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm dark:text-gray-300">© 2025 Miguel Luiz Manzoni. Todos os direitos reservados.</p>
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="abrirModal('modalPrivacidade')" class="border border-gray-300 dark:border-gray-600 
+                               bg-white dark:bg-gray-700 
+                               text-gray-700 dark:text-gray-200 
+                               px-4 py-2 rounded-md shadow 
+                               hover:bg-gray-100 dark:hover:bg-gray-600 
+                               transition text-sm">
+                        Política de Privacidade
+                    </button>
+
+                    <button onclick="abrirModal('modalTermos')" class="border border-gray-300 dark:border-gray-600 
+                               bg-white dark:bg-gray-700 
+                               text-gray-700 dark:text-gray-200 
+                               px-4 py-2 rounded-md shadow 
+                               hover:bg-gray-100 dark:hover:bg-gray-600 
+                               transition text-sm">
+                        Termos de Uso
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Política de Privacidade -->
+    <div id="modalPrivacidade"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div
+            class="bg-white max-w-2xl w-full rounded-lg shadow-lg p-6 overflow-y-auto max-h-[80vh] relative dark:bg-gray-800">
+            <button onclick="fecharModal('modalPrivacidade')"
+                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl dark:text-gray-300 dark:hover:text-red-400">&times;</button>
+            <h2 class="text-2xl font-semibold mb-4 dark:text-white">Política de Privacidade</h2>
+            <div class="prose dark:prose-invert">
+                <p class="mb-4">Esta Política de Privacidade descreve como suas informações pessoais são coletadas,
+                    usadas e compartilhadas quando você visita ou faz uso deste site.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Informações que Coletamos</h3>
+                <p class="mb-4">Coletamos automaticamente certas informações sobre seu dispositivo, incluindo
+                    informações sobre seu navegador da web, endereço IP, fuso horário e alguns dos cookies que estão
+                    instalados no seu dispositivo.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Como Usamos Suas Informações</h3>
+                <p class="mb-4">Usamos as informações coletadas para:</p>
+                <ul class="list-disc pl-6 mb-4">
+                    <li>Fornecer e operar o site</li>
+                    <li>Melhorar e personalizar sua experiência</li>
+                    <li>Entender e analisar como você usa nosso site</li>
+                    <li>Desenvolver novos produtos, serviços e funcionalidades</li>
+                </ul>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Compartilhamento de Informações</h3>
+                <p class="mb-4">Nós não compartilhamos suas informações pessoais com terceiros, exceto conforme descrito
+                    nesta Política de Privacidade ou quando acreditamos que é necessário para cumprir com a lei.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Cookies</h3>
+                <p class="mb-4">Utilizamos cookies para melhorar sua experiência no site. Você pode instruir seu
+                    navegador a recusar todos os cookies ou a indicar quando um cookie está sendo enviado.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Alterações</h3>
+                <p class="mb-4">Podemos atualizar esta política de privacidade periodicamente para refletir mudanças em
+                    nossas práticas ou por outros motivos operacionais, legais ou regulatórios.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Termos de Uso -->
+    <div id="modalTermos" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div
+            class="bg-white max-w-2xl w-full rounded-lg shadow-lg p-6 overflow-y-auto max-h-[80vh] relative dark:bg-gray-800">
+            <button onclick="fecharModal('modalTermos')"
+                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl dark:text-gray-300 dark:hover:text-red-400">&times;</button>
+            <h2 class="text-2xl font-semibold mb-4 dark:text-white">Termos de Uso</h2>
+            <div class="prose dark:prose-invert">
+                <p class="mb-4">Ao acessar e usar este site, você concorda em cumprir estes Termos de Uso e todas as
+                    leis e regulamentos aplicáveis.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Uso do Site</h3>
+                <p class="mb-4">Você concorda em usar este site apenas para fins legais e de maneira que não infrinja os
+                    direitos de, restrinja ou iniba o uso e gozo deste site por qualquer terceiro.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Propriedade Intelectual</h3>
+                <p class="mb-4">Todo o conteúdo deste site, incluindo textos, gráficos, logotipos, ícones de botão,
+                    imagens, clipes de áudio, downloads digitais e software, é propriedade da Miguel Luiz Manzoni ou de
+                    seus fornecedores de conteúdo e é protegido por leis de direitos autorais internacionais.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Links para Outros Sites</h3>
+                <p class="mb-4">Este site pode conter links para sites de terceiros. Esses links são fornecidos apenas
+                    para sua conveniência. Não temos controle sobre o conteúdo desses sites e não aceitamos
+                    responsabilidade por eles.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Limitação de Responsabilidade</h3>
+                <p class="mb-4">Em nenhuma circunstância seremos responsáveis por quaisquer danos diretos, indiretos,
+                    incidentais, consequenciais ou punitivos decorrentes do seu acesso, uso ou incapacidade de usar este
+                    site.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Alterações aos Termos</h3>
+                <p class="mb-4">Reservamo-nos o direito, a nosso exclusivo critério, de modificar ou substituir estes
+                    Termos a qualquer momento. Se uma revisão for importante, tentaremos fornecer um aviso com pelo
+                    menos 30 dias de antecedência antes que os novos termos entrem em vigor.</p>
+
+                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Lei Aplicável</h3>
+                <p class="mb-4">Estes Termos serão regidos e interpretados de acordo com as leis do Brasil, sem
+                    considerar seus conflitos de disposições legais.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
