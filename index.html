@@ -1,398 +1,475 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Hub Pessoal</title>
+    <title>Blog Pessoal - Linha do Tempo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-pattern dark:bg-gray-900">
-    <!-- Header/Navigation -->
-    <header
-        class="fixed top-0 left-0 right-0 bg-gray-600 bg-opacity-90 backdrop-blur-sm z-50 shadow-md dark:bg-gray-800 dark:bg-opacity-90">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-bold text-white dark:text-blue-200">MIGUEL LUIZ MANZONI</h1>
-                <p class="text-sm text-blue-200 dark:text-blue-300">Técnico em Administração</p>
-            </div>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-6">
-                    <li><a href="#links"
-                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Links</a>
-                    </li>
-                    <li><a href="#destaques"
-                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Destaques</a>
-                    </li>
-                    <li><a href="#sobre"
-                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Sobre</a>
-                    </li>
-                    <li><a href="#contato"
-                            class="text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Contato</a>
-                    </li>
-                </ul>
-            </nav>
-            <button id="theme-toggle"
-                class="theme-toggle p-2 rounded-full bg-gray-700 text-blue-200 hover:bg-gray-600 transition dark:bg-gray-700 dark:text-blue-300 dark:hover:bg-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 theme-icon" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button>
-            <button id="mobile-menu-button" class="md:hidden text-blue-200 dark:text-blue-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
+<body class="min-h-screen flex flex-col">
+    <!-- Header with Navigation -->
+    <header class="bg-gray-900 text-white shadow-lg fixed w-full z-10 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold flex items-center">
+                    <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 text-transparent bg-clip-text">
+                        Miguel Luiz Manzoni</span>
+                    <span class="ml-2 bg-indigo-500 text-xs px-2 py-1 rounded-full">Blog</span>
+                </a>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 dark:bg-gray-800">
-            <ul class="px-4 py-2 space-y-2">
-                <li><a href="#links"
-                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Links</a>
-                </li>
-                <li><a href="#destaques"
-                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Destaques</a>
-                </li>
-                <li><a href="#sobre"
-                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Sobre</a>
-                </li>
-                <li><a href="#contato"
-                        class="block py-2 text-blue-200 hover:text-white transition dark:text-blue-300 dark:hover:text-white">Contato</a>
-                </li>
-            </ul>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#home" class="hover:text-indigo-300 transition-colors">Início</a></li>
+                        <li><a href="#timeline" class="hover:text-indigo-300 transition-colors">Linha do Tempo</a></li>
+                        <li><a href="#about" class="hover:text-indigo-300 transition-colors">Sobre</a></li>
+                        <li><a href="#contact" class="hover:text-indigo-300 transition-colors">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu"
+                class="mobile-menu md:hidden bg-gray-800 mt-2 rounded-lg border border-gray-700 hidden">
+                <ul class="flex flex-col space-y-2 p-4">
+                    <li><a href="#home" class="block hover:text-indigo-300 transition-colors py-2">Início</a></li>
+                    <li><a href="#timeline" class="block hover:text-indigo-300 transition-colors py-2">Linha do
+                            Tempo</a></li>
+                    <li><a href="#about" class="block hover:text-indigo-300 transition-colors py-2">Sobre</a></li>
+                    <li><a href="#contact" class="block hover:text-indigo-300 transition-colors py-2">Contato</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="pt-24 pb-12 container mx-auto px-4">
-
+    <main class="flex-grow pt-20">
         <!-- Hero Section -->
-        <section class="text-center mb-16 fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Meu Hub Profissional</h2>
-            <p class="text-lg max-w-2xl mx-auto dark:text-gray-300">Tudo sobre minha carreira e experiência em
-                administração.</p>
-        </section>
-
-        <!-- Links Section -->
-        <section id="links" class="mb-16 fade-in">
-            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Meus Links</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/miguel-luiz-manzoni-01a799278/" target="_blank"
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg dark:text-white">LinkedIn</h3>
-                        <p class="text-sm text-blue-200 dark:text-blue-300">Perfil administrativo</p>
-                    </div>
-                </a>
-
-                <!-- Portfolio -->
-                <a href="https://meuportfolio.com" target="_blank"
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M20 3h-8c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2h8c1.103 0 2-.897 2-2v-6c0-1.103-.897-2-2-2zm-8 8v-6h8l.002 6h-8.002zm-6 2h-4v2h4c1.103 0 2-.897 2-2v-6h-2v6zm-2-8h4v-2h-4c-1.103 0-2 .897-2 2v6h2v-6z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg dark:text-white">Blog Pessoal</h3>
-                        <p class="text-sm text-blue-200 dark:text-blue-300">Meus artigos</p>
-                    </div>
-                </a>
-
-                <!-- Currículo -->
-                <a href="https://drive.usercontent.google.com/u/0/uc?id=1nAtD4l7pE1ShoapeurDXFjQnZBkZKLTI&export=download"
-                    target="_blank"
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M14 2h-7.229c-1.583 0-2.771 1.139-2.771 2.583v16.834c0 1.445 1.188 2.583 2.771 2.583h10.458c1.583 0 2.771-1.139 2.771-2.583v-12.75l-6-5.667zm-5 8h2v8h-2v-8zm4 3h2v5h-2v-5zm-8-3h2v5h-2v-5zm11.667 10.833c0 .46-.369.834-.833.834h-10.5c-.46 0-.833-.375-.833-.834v-16.666c0-.46.373-.833.833-.833h6.667v4.375c0 .46.373.833.833.833h4.333v12.291z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg dark:text-white">Currículo</h3>
-                        <p class="text-sm text-blue-200 dark:text-blue-300">Baixar em PDF</p>
-                    </div>
-                </a>
-
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/_manzonimiguel_/" target="_blank"
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg dark:text-white">Instagram</h3>
-                        <p class="text-sm text-blue-200 dark:text-blue-300">@_manzonimiguel_</p>
-                    </div>
-                </a>
-
-                <!-- GitHub -->
-                <a href="https://github.com/ManzoniM?tab=repositories" target="_blank"
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 flex items-center space-x-4 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg dark:text-white">Github</h3>
-                        <p class="text-sm text-blue-200 dark:text-blue-300"> Todos meus sites</p>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <!-- Destaques Section -->
-        <section id="destaques" class="mb-16 fade-in">
-            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Destaques</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Último artigo --> <!--
-                <div class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 h-40 rounded-lg mb-4 flex items-center justify-center dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M24 3v18h-24v-18h24zm-1 1h-22v16h22v-16zm-1 3h-20v1h20v-1zm-6 2h-14v1h14v-1zm-6 2h-8v1h8v-1zm8 2h-14v1h14v-1zm0 2h-14v1h14v-1zm-8 2h-8v1h8v-1z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2 dark:text-white">Último Artigo</h3>
-                    <p class="text-sm mb-4 dark:text-gray-300">Título do meu último artigo publicado no blog.</p>
-                    <a href="#" target="_blank" class="text-blue-200 hover:text-white text-sm font-medium dark:text-blue-300 dark:hover:text-white">Ler →</a>
-                </div> -->
-
-                <!-- Portifólio Senac -->
-                <div
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="bg-blue-200 h-40 rounded-lg mb-4 flex items-center justify-center dark:bg-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                            fill="currentColor">
-                            <path
-                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17v-10l-6 6 6 6 6-6-6-6v10z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2 dark:text-white">Portifólio Senac</h3>
-                    <p class="text-sm mb-4 dark:text-gray-300">Portifólio feito para fins de mostrar tudo que foi
-                        aprendido no curso em Técnico de Administração pelo Senac Jaú</p>
-                    <a href="https://manzonim.github.io/Senac/" target="_blank"
-                        class="text-blue-200 hover:text-white text-sm font-medium dark:text-blue-300 dark:hover:text-white">Ver
-                        projeto →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre Section -->
-        <section id="sobre" class="mb-16 fade-in">
-            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Sobre Mim</h2>
-            <div class="bg-gray-700 bg-opacity-70 rounded-xl p-8 max-w-4xl mx-auto dark:bg-gray-800">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-32 h-32 rounded-full bg-blue-200 overflow-hidden flex-shrink-0 dark:bg-blue-700">
-                        <!-- Placeholder for profile image -->
-                        <div class="w-full h-full flex items-center justify-center">
-                            <img src="foto1.jpg" alt="Minha Foto"
-                                class="w-40 h-40 rounded-full shadow-md border-2 border-gray-300 dark:border-gray-700">
-                        </div>
-
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4 dark:text-white">Miguel Luiz Manzoni</h3>
-                        <p class="mb-4 dark:text-gray-300">Técnico em Administração com experiência em processos
-                            administrativos, gestão de documentos e atendimento ao cliente.</p>
-                        <p class="dark:text-gray-300">Com formação técnica e mais de 3 anos de experiência no setor
-                            administrativo, possuo habilidades em organização, gestão de tempo e resolução de problemas.
-                        </p>
+        <section id="home" class="gradient-bg hero-pattern py-24">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1
+                        class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-300 to-indigo-400 text-transparent bg-clip-text">
+                        Minha Jornada</h1>
+                    <p class="text-xl md:text-2xl text-indigo-200 max-w-3xl mx-auto">Uma linha do tempo da minhas
+                        conquistas</p>
+                    <div class="mt-8 flex justify-center space-x-4">
+                        <div class="w-3 h-3 rounded-full bg-indigo-500 animate-pulse"></div>
+                        <div class="w-3 h-3 rounded-full bg-indigo-500 animate-pulse delay-100"></div>
+                        <div class="w-3 h-3 rounded-full bg-indigo-500 animate-pulse delay-200"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contato Section -->
-        <section id="contato" class="fade-in">
-            <h2 class="text-2xl font-bold mb-8 text-center dark:text-white">Contato</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <!-- Email -->
-                <div
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg dark:text-white">E-mail</h3>
-                            <p class="text-sm text-blue-200 dark:text-blue-300">miguel.lmanzoni@gmail.com</p>
-                        </div>
-                    </div>
-                    <button onclick="copyToClipboard('miguel.lmanzoni@gmail.com')"
-                        class="mt-4 w-full py-2 bg-blue-200 bg-opacity-20 text-blue-200 rounded-lg hover:bg-opacity-30 transition dark:bg-blue-800 dark:bg-opacity-20 dark:text-blue-300 dark:hover:bg-opacity-30">
-                        Copiar e-mail
-                    </button>
+        <!-- Timeline Section -->
+        <section id="timeline" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-bold mb-2 bg-gradient-to-r from-indigo-400 to-indigo-300 text-transparent bg-clip-text">
+                        Linha do Tempo
+                    </h2>
+                    <p class="text-indigo-200">Minha trajetória acadêmica e profissional</p>
+                    <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <!-- Telefone -->
-                <div
-                    class="bg-gray-700 bg-opacity-70 rounded-xl p-6 card-hover hover:bg-gray-600 transition dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-blue-200 p-3 rounded-lg dark:bg-blue-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M20 22.621l-3.521-3.52c-1.227.804-2.586 1.447-4.061 1.888-1.488.444-3.05.679-4.669.679-6.617 0-12-5.383-12-12s5.383-12 12-12 12 5.383 12 12c0 1.619-.236 3.181-.679 4.669-.441 1.475-1.084 2.833-1.888 4.061l3.52 3.521-1.412 1.412zm-10.621-14.621c-3.859 0-7 3.14-7 7 0 .772.156 1.52.428 2.222l1.396-1.396c-.109-.441-.209-.887-.282-1.344-.139-.871-.22-1.77-.22-2.693 0-2.76 2.24-5 5-5 .923 0 1.822.081 2.693.22.457.073.903.173 1.344.282l1.396-1.396c-.702-.272-1.45-.428-2.222-.428zm9.001 5.997c-.08-.855-.19-1.696-.33-2.525l-1.447.387c.109.68.203 1.37.273 2.067l1.504-.929zm-10.38-5.38c.48-.276.98-.518 1.495-.721l-1.133-1.133c-.401.185-.79.393-1.167.623l.805 1.231zm12.142 5.688l-1.298.734c.166.586.306 1.185.418 1.797l1.441-.407c-.137-.629-.265-1.265-.381-1.908.001-.072.009-.143.009-.216 0-.732-.092-1.439-.253-2.118l-1.449.398c.131.595.222 1.208.27 1.832h-.002zm-11.579-9.405c-.715.428-1.39.913-2.018 1.45l-.799-1.222c.715-.467 1.476-.878 2.269-1.229l.548 1.001zm9.387 3.147c-.567-.302-1.156-.566-1.763-.792l-.61 1.33c.484.222.952.472 1.405.747l.968-1.285z" />
-                            </svg>
+                <div class="timeline">
+                    <!-- Evento 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-user-graduate"></i>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-lg dark:text-white">Telefone</h3>
-                            <p class="text-sm text-blue-200 dark:text-blue-300">(14) 99799-6991</p>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Formação Básica</h3>
+                            <p class="timeline-description">
+                                Conclusão do Ensino Médio e participação no Tiro de Guerra, onde desenvolvi disciplina,
+                                liderança e compromisso com responsabilidades.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Ensino Médio</span>
+                                <span class="timeline-tag">Formação Pessoal</span>
+                            </div>
                         </div>
                     </div>
-                    <button onclick="copyToClipboard('(14) 99799-6991')"
-                        class="mt-4 w-full py-2 bg-blue-200 bg-opacity-20 text-blue-200 rounded-lg hover:bg-opacity-30 transition dark:bg-blue-800 dark:bg-opacity-20 dark:text-blue-300 dark:hover:bg-opacity-30">
-                        Copiar telefone
-                    </button>
+
+                    <!-- Evento 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Início na Área Administrativa</h3>
+                            <p class="timeline-description">
+                                Ingressando como Aprendiz na Suzano Papel e Celulose S.A., atuei como Assistente
+                                Administrativo, desenvolvendo habilidades em organização, controle de documentos e
+                                suporte à gestão.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Administração</span>
+                                <span class="timeline-tag">Primeira Experiência Profissional</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Atuação Profissional</h3>
+                            <p class="timeline-description">
+                                Trabalhei na Bracell SP Celulose, onde ampliei minhas competências em trabalho em
+                                equipe, comunicação organizacional e apoio a processos administrativos e operacionais.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Administração</span>
+                                <span class="timeline-tag">Comunicação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Transição para a Tecnologia</h3>
+                            <p class="timeline-description">
+                                Iniciei o curso técnico em Desenvolvimento de Sistemas na ETEC Joaquim Ferreira do
+                                Amaral. Paralelamente, trabalhei na Toffano Produtos Alimentícios, desempenhando funções
+                                administrativas durante o período da manhã.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Desenvolvimento de Sistemas</span>
+                                <span class="timeline-tag">Administração</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Experiência Educacional</h3>
+                            <p class="timeline-description">
+                                Estagiei como Educador de Sala no Prepara Cursos, ministrando aulas práticas de
+                                informática e pacote Office. Desenvolvi habilidades de comunicação, didática,
+                                organização e liderança em ambientes educacionais.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Educação</span>
+                                <span class="timeline-tag">Tecnologia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evento 6 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Empreendedorismo e Aperfeiçoamento</h3>
+                            <p class="timeline-description">
+                                Em fase de desenvolvimento de projetos próprios, busco abrir uma empresa futuramente.
+                                Paralelamente, continuo aprimorando minhas
+                                habilidades técnicas e pretendo ingressar no ensino superior em Administração ou
+                                Tecnologia.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="timeline-tag">Empreendedorismo</span>
+                                <span class="timeline-tag">Tecnologia</span>
+                                <span class="timeline-tag">Administração</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-bold mb-2 bg-gradient-to-r from-indigo-400 to-indigo-300 text-transparent bg-clip-text">
+                        Sobre Mim</h2>
+                    <p class="text-indigo-200">Conheça minha jornada</p>
+                    <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3">
+                            <div
+                                class="bg-gray-800 border-2 border-indigo-500 rounded-xl w-48 h-48 md:w-64 md:h-64 mx-auto flex items-center justify-center overflow-hidden">
+                                <div class="relative w-full h-full">
+                                    <!-- Degradê superior -->
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-indigo-900/30 z-10">
+                                    </div>
+
+                                    <!-- Imagem -->
+                                    <img src="foto.jpg" alt="Minha Foto"
+                                        class="absolute inset-0 w-full h-full object-cover z-0">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-semibold mb-4 text-indigo-300">Olá, eu sou Miguel</h3>
+                            <p class="mb-4 text-gray-300">Sou um desenvolvedor junior de frontend, com experiência
+                                prática em HTML, CSS e JavaScript, e atualmente curso Técnico em Administração.</p>
+                            <p class="mb-4 text-gray-300">Já atuei como assistente administrativo, o que me proporcionou
+                                conhecimento sobre organização, planejamento e rotina empresarial — habilidades que hoje
+                                reforçam minha atuação como desenvolvedor. </p>
+                            <p class="mb-4 text-gray-300">Estou sempre em busca de aprender mais, aprimorar meus
+                                projetos e contribuir de forma eficiente em equipes multidisciplinares. Gosto de criar
+                                interfaces que façam sentido para o usuário e tragam resultados reais.</p>
+
+                            <!-- Habilidades Técnicas -->
+                            <section class="mt-8">
+                                <h2 class="text-xl font-bold text-indigo-300 mb-4">Habilidades Técnicas</h2>
+                                <div class="flex flex-wrap gap-3">
+                                    <!-- Programação -->
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">HTML5</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">CSS3</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Layout Responsivo</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Git & GitHub</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Consumo de APIs</span>
+
+                                    <!-- Administração -->
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Pacote Office</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Rotinas
+                                        Administrativas</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Planejamento</span>
+                                    <span class="skill-badge px-3 py-1 rounded-full text-sm">Comunicação Escrita</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-bold mb-2 bg-gradient-to-r from-indigo-400 to-indigo-300 text-transparent bg-clip-text">
+                        Entre em Contato</h2>
+                    <p class="text-indigo-200">Vamos conversar!</p>
+                    <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="card p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-300">Informações de Contato</h3>
+                        <p class="mb-6 text-gray-300">Fique à vontade para entrar em contato comigo através dos canais
+                            abaixo</p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-indigo-400 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-300">miguel.lmanzoni@gmail.com</p>
+                                    <button onclick="copyToClipboard('miguel.lmanzoni@gmail.com')"
+                                        class="copy-btn text-indigo-400 text-sm mt-1 hover:text-indigo-300 transition-colors">
+                                        <i class="far fa-copy mr-1"></i>Copiar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-indigo-400 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Telefone</h4>
+                                    <p class="text-gray-300">+55 (14) 99799-6991</p>
+                                    <button onclick="copyToClipboard('+55 (14) 99799-6991')"
+                                        class="copy-btn text-indigo-400 text-sm mt-1 hover:text-indigo-300 transition-colors">
+                                        <i class="far fa-copy mr-1"></i>Copiar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-indigo-400 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-semibold">Localização</h4>
+                                    <p class="text-gray-300">Jaú/SP, Brasil</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 pt-4">
+                                <a href="https://www.linkedin.com/in/miguel-manzoni/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon text-gray-400 hover:text-indigo-400 transition-colors"
+                                    aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+
+                                <a href="https://github.com/ManzoniM" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon text-gray-400 hover:text-indigo-400 transition-colors"
+                                    aria-label="GitHub">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/_manzonimiguel_/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-icon text-gray-400 hover:text-indigo-400 transition-colors"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-700 bg-opacity-90 py-6 dark:bg-gray-800">
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <p class="text-sm dark:text-gray-300">© 2025 Miguel Luiz Manzoni. Todos os direitos reservados.</p>
+                    <p>&copy; 2025 Miguel Luiz Manzoni. Todos os direitos reservados.</p>
                 </div>
-                <div class="flex gap-4">
-                    <button onclick="abrirModal('modalPrivacidade')" class="border border-gray-300 dark:border-gray-600 
-                               bg-white dark:bg-gray-700 
-                               text-gray-700 dark:text-gray-200 
-                               px-4 py-2 rounded-md shadow 
-                               hover:bg-gray-100 dark:hover:bg-gray-600 
-                               transition text-sm">
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button onclick="openModal('privacyModal')"
+                        class="px-3 py-1 border border-gray-700 rounded-md bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
                         Política de Privacidade
                     </button>
 
-                    <button onclick="abrirModal('modalTermos')" class="border border-gray-300 dark:border-gray-600 
-                               bg-white dark:bg-gray-700 
-                               text-gray-700 dark:text-gray-200 
-                               px-4 py-2 rounded-md shadow 
-                               hover:bg-gray-100 dark:hover:bg-gray-600 
-                               transition text-sm">
+                    <button onclick="openModal('termsModal')"
+                        class="px-3 py-1 border border-gray-700 rounded-md bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
                         Termos de Uso
                     </button>
+
+                    <a href="#home"
+                        class="px-3 py-1 border border-gray-700 rounded-md bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+                        Voltar ao Topo
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modal de Política de Privacidade -->
-    <div id="modalPrivacidade"
-        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div
-            class="bg-white max-w-2xl w-full rounded-lg shadow-lg p-6 overflow-y-auto max-h-[80vh] relative dark:bg-gray-800">
-            <button onclick="fecharModal('modalPrivacidade')"
-                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl dark:text-gray-300 dark:hover:text-red-400">&times;</button>
-            <h2 class="text-2xl font-semibold mb-4 dark:text-white">Política de Privacidade</h2>
-            <div class="prose dark:prose-invert">
-                <p class="mb-4">Esta Política de Privacidade descreve como suas informações pessoais são coletadas,
-                    usadas e compartilhadas quando você visita ou faz uso deste site.</p>
+    <!-- Modal para Política de Privacidade -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-2xl font-bold text-indigo-300">Política de Privacidade</h2>
+                <button class="close-modal" onclick="closeModal('privacyModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4 text-gray-300">Esta Política de Privacidade descreve como suas informações pessoais são
+                    coletadas, usadas e compartilhadas quando você visita ou faz uso deste site.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Informações que Coletamos</h3>
-                <p class="mb-4">Coletamos automaticamente certas informações sobre seu dispositivo, incluindo
-                    informações sobre seu navegador da web, endereço IP, fuso horário e alguns dos cookies que estão
-                    instalados no seu dispositivo.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Informações que Coletamos</h3>
+                <p class="mb-4 text-gray-300">Coletamos automaticamente certas informações sobre seu dispositivo,
+                    incluindo informações sobre seu navegador da web, endereço IP, fuso horário e alguns dos cookies que
+                    estão instalados no seu dispositivo.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Como Usamos Suas Informações</h3>
-                <p class="mb-4">Usamos as informações coletadas para:</p>
-                <ul class="list-disc pl-6 mb-4">
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Como Usamos Suas Informações</h3>
+                <p class="mb-4 text-gray-300">Usamos as informações coletadas para:</p>
+                <ul class="list-disc pl-6 mb-4 text-gray-300">
                     <li>Fornecer e operar o site</li>
                     <li>Melhorar e personalizar sua experiência</li>
                     <li>Entender e analisar como você usa nosso site</li>
                     <li>Desenvolver novos produtos, serviços e funcionalidades</li>
                 </ul>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Compartilhamento de Informações</h3>
-                <p class="mb-4">Nós não compartilhamos suas informações pessoais com terceiros, exceto conforme descrito
-                    nesta Política de Privacidade ou quando acreditamos que é necessário para cumprir com a lei.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Compartilhamento de Informações</h3>
+                <p class="mb-4 text-gray-300">Nós não compartilhamos suas informações pessoais com terceiros, exceto
+                    conforme descrito nesta Política de Privacidade ou quando acreditamos que é necessário para cumprir
+                    com a lei.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Cookies</h3>
-                <p class="mb-4">Utilizamos cookies para melhorar sua experiência no site. Você pode instruir seu
-                    navegador a recusar todos os cookies ou a indicar quando um cookie está sendo enviado.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Cookies</h3>
+                <p class="mb-4 text-gray-300">Utilizamos cookies para melhorar sua experiência no site. Você pode
+                    instruir seu navegador a recusar todos os cookies ou a indicar quando um cookie está sendo enviado.
+                </p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Alterações</h3>
-                <p class="mb-4">Podemos atualizar esta política de privacidade periodicamente para refletir mudanças em
-                    nossas práticas ou por outros motivos operacionais, legais ou regulatórios.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Alterações</h3>
+                <p class="mb-4 text-gray-300">Podemos atualizar esta política de privacidade periodicamente para
+                    refletir mudanças em nossas práticas ou por outros motivos operacionais, legais ou regulatórios.</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('privacyModal')"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-colors">Fechar</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal de Termos de Uso -->
-    <div id="modalTermos" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div
-            class="bg-white max-w-2xl w-full rounded-lg shadow-lg p-6 overflow-y-auto max-h-[80vh] relative dark:bg-gray-800">
-            <button onclick="fecharModal('modalTermos')"
-                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl dark:text-gray-300 dark:hover:text-red-400">&times;</button>
-            <h2 class="text-2xl font-semibold mb-4 dark:text-white">Termos de Uso</h2>
-            <div class="prose dark:prose-invert">
-                <p class="mb-4">Ao acessar e usar este site, você concorda em cumprir estes Termos de Uso e todas as
-                    leis e regulamentos aplicáveis.</p>
+    <!-- Modal para Termos de Uso -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="text-2xl font-bold text-indigo-300">Termos de Uso</h2>
+                <button class="close-modal" onclick="closeModal('termsModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4 text-gray-300">Ao acessar e usar este site, você concorda em cumprir estes Termos de Uso
+                    e todas as leis e regulamentos aplicáveis.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Uso do Site</h3>
-                <p class="mb-4">Você concorda em usar este site apenas para fins legais e de maneira que não infrinja os
-                    direitos de, restrinja ou iniba o uso e gozo deste site por qualquer terceiro.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Uso do Site</h3>
+                <p class="mb-4 text-gray-300">Você concorda em usar este site apenas para fins legais e de maneira que
+                    não infrinja os direitos de, restrinja ou iniba o uso e gozo deste site por qualquer terceiro.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Propriedade Intelectual</h3>
-                <p class="mb-4">Todo o conteúdo deste site, incluindo textos, gráficos, logotipos, ícones de botão,
-                    imagens, clipes de áudio, downloads digitais e software, é propriedade da Miguel Luiz Manzoni ou de
-                    seus fornecedores de conteúdo e é protegido por leis de direitos autorais internacionais.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Propriedade Intelectual</h3>
+                <p class="mb-4 text-gray-300">Todo o conteúdo deste site, incluindo textos, gráficos, logotipos, ícones
+                    de botão, imagens, clipes de áudio, downloads digitais e software, é propriedade da Miguel Luiz
+                    Manzoni ou de seus fornecedores de conteúdo e é protegido por leis de direitos autorais
+                    internacionais.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Links para Outros Sites</h3>
-                <p class="mb-4">Este site pode conter links para sites de terceiros. Esses links são fornecidos apenas
-                    para sua conveniência. Não temos controle sobre o conteúdo desses sites e não aceitamos
-                    responsabilidade por eles.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Links para Outros Sites</h3>
+                <p class="mb-4 text-gray-300">Este site pode conter links para sites de terceiros. Esses links são
+                    fornecidos apenas para sua conveniência. Não temos controle sobre o conteúdo desses sites e não
+                    aceitamos responsabilidade por eles.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Limitação de Responsabilidade</h3>
-                <p class="mb-4">Em nenhuma circunstância seremos responsáveis por quaisquer danos diretos, indiretos,
-                    incidentais, consequenciais ou punitivos decorrentes do seu acesso, uso ou incapacidade de usar este
-                    site.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Limitação de Responsabilidade</h3>
+                <p class="mb-4 text-gray-300">Em nenhuma circunstância seremos responsáveis por quaisquer danos diretos,
+                    indiretos, incidentais, consequenciais ou punitivos decorrentes do seu acesso, uso ou incapacidade
+                    de usar este site.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Alterações aos Termos</h3>
-                <p class="mb-4">Reservamo-nos o direito, a nosso exclusivo critério, de modificar ou substituir estes
-                    Termos a qualquer momento. Se uma revisão for importante, tentaremos fornecer um aviso com pelo
-                    menos 30 dias de antecedência antes que os novos termos entrem em vigor.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Alterações aos Termos</h3>
+                <p class="mb-4 text-gray-300">Reservamo-nos o direito, a nosso exclusivo critério, de modificar ou
+                    substituir estes Termos a qualquer momento. Se uma revisão for importante, tentaremos fornecer um
+                    aviso com pelo menos 30 dias de antecedência antes que os novos termos entrem em vigor.</p>
 
-                <h3 class="text-xl font-medium mt-6 mb-3 dark:text-white">Lei Aplicável</h3>
-                <p class="mb-4">Estes Termos serão regidos e interpretados de acordo com as leis do Brasil, sem
-                    considerar seus conflitos de disposições legais.</p>
+                <h3 class="text-xl font-semibold mt-6 mb-3 text-indigo-300">Lei Aplicável</h3>
+                <p class="mb-4 text-gray-300">Estes Termos serão regidos e interpretados de acordo com as leis do
+                    Brasil, sem considerar seus conflitos de disposições legais.</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('termsModal')"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition-colors">Fechar</button>
             </div>
         </div>
     </div>
